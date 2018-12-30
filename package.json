@@ -1,0 +1,24 @@
+{
+  "name": "webdevelopmentwithnodeandexpress",
+  "version": "1.0.0",
+  "description": "> 《Node与Express开发》代码笔记",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feihu1996x/webDevelopmentWithNodeAndExpress.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "web"
+  ],
+  "author": "angus",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/feihu1996x/webDevelopmentWithNodeAndExpress/issues"
+  },
+  "homepage": "https://github.com/feihu1996x/webDevelopmentWithNodeAndExpress#readme"
+}
