@@ -3,6 +3,14 @@ const handlebars = require('express3-handlebars').create({ defaultLayout: 'main'
 
 const app = express()
 
+const fortunes = [
+    "Conquer your fears or they will conquer you.",
+    "Rivers need springs.",
+    "Do not fear what you don't know.",
+    "You will have a pleasant surprise.",
+    "Whenever possible, keep it simple.",
+]
+
 // 设置handlebars视图引擎
 app.engine('handlebars', handlebars.engine)
 app.set('view engine', 'handlebars')
@@ -25,7 +33,8 @@ app.get('/', function(req, res){
 })
 
 app.get('/about', function(req, res){
-    res.render('about')
+    const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)]
+    res.render('about', {fortune: randomFortune})
 })
 
 // app.use是Express添加中间件的一种方法
