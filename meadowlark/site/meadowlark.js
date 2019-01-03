@@ -12,6 +12,12 @@ app.set('port', process.env.PORT || 3000)
 
 // 在Express中，路由和中间件的添加顺序至关重要
 
+app.use(function(req, res, next){
+    // res.locals 对象是要传给视图的上下文的一部分
+    res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1'
+    next()
+})
+
 // static中间件可以将一个或多个目录指派为包含静态资源的目录
 // 其中的资源不经过任何特殊处理直接发送到客户端
 // 可以在其中放图片、CSS文件、客户端JavaScript文件之类的资源
@@ -26,7 +32,10 @@ app.get('/', function(req, res){
 })
 
 app.get('/about', function(req, res){
-    res.render('about', {fortune: fortune.getFortune()})
+    res.render('about', {
+        fortune: fortune.getFortune(),
+        pageTestScript: '/static/qa/tests-about.js'
+    })
 })
 
 // app.use是Express添加中间件的一种方法
