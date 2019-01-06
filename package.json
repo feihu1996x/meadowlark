@@ -1,24 +1,26 @@
 {
-  "name": "webdevelopmentwithnodeandexpress",
+  "name": "meadowlark",
   "version": "1.0.0",
-  "description": "《Node与Express开发》代码笔记",
-  "main": "index.js",
+  "description": "website powered by express",
+  "main": "meadowlark.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/feihu1996x/webDevelopmentWithNodeAndExpress.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node meadowlark.js"
   },
   "keywords": [
     "node",
     "express",
-    "web"
+    "meadowlark"
   ],
   "author": "angus",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/feihu1996x/webDevelopmentWithNodeAndExpress/issues"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express3-handlebars": "^0.5.2"
   },
-  "homepage": "https://github.com/feihu1996x/webDevelopmentWithNodeAndExpress#readme"
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "zombie": "^6.1.4"
+  }
 }

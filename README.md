@@ -1,3 +1,14 @@
-# webDevelopmentWithNodeAndExpress
+# meadowlark
 
-> 《Node与Express开发》代码笔记
+```bash
+# install dependencies
+npm install
+npm install -g mocha
+
+# start app
+npm run start
+
+# run tests
+mocha -u tdd -R spec qa/tests-crosspage.js
+mocha -u tdd -R spec qa/tests-unit.js
+```
