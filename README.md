@@ -13,4 +13,7 @@ npm run tests-unit
 
 # pre commit
 npm run precommit
+
+# link check
+linkchecker http://localhost:$PORT
 ```
