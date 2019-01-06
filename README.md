@@ -7,13 +7,6 @@ npm install
 # start app
 npm run start
 
-# run tests
-npm run tests-crosspage
-npm run tests-unit
-
-# pre commit
-npm run precommit
-
-# link check
-linkchecker http://localhost:$PORT
+# automate task
+npm run tasks
 ```
