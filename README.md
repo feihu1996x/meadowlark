@@ -9,6 +9,9 @@ npm install -g mocha
 npm run start
 
 # run tests
-mocha -u tdd -R spec qa/tests-crosspage.js
-mocha -u tdd -R spec qa/tests-unit.js
+npm run tests-crosspage
+npm run tests-unit
+
+# pre commit
+npm run precommit
 ```
