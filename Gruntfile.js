@@ -31,7 +31,6 @@ module.exports = function(grunt) {
                 'public/qa/**/*.js',
                 'qa/**/*.js',
             ],
-
         },
         exec: {
             linkchecker: {
