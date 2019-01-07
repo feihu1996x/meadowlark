@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     ].forEach(function(task){
         grunt.loadNpmTasks(task)
     })
-    
+
     // config plugin
     grunt.initConfig({
         cafemocha: {
@@ -31,15 +31,14 @@ module.exports = function(grunt) {
                 'public/qa/**/*.js',
                 'qa/**/*.js',
             ],
-            
+
         },
         exec: {
             linkchecker: {
                 'cmd': 'linkchecker http://localhost:' + config.PORT + config.URL_PREFIX,
             },
         },
-
-        // register task
-        grunt.registerTask('default', ['cafemocha', 'jshint', 'exec'])
     })
+    // register task
+    grunt.registerTask('default', ['cafemocha', 'jshint', 'exec'])
 }
