@@ -39,6 +39,7 @@ module.exports = function(grunt) {
             },
         },
     })
+
     // register task
     grunt.registerTask('default', ['cafemocha', 'jshint', 'exec'])
 }
