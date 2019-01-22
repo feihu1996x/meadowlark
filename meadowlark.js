@@ -11,6 +11,9 @@ app.set('view engine', 'handlebars')
 
 app.set('port', process.env.PORT || config.PORT || 3000)
 
+// 禁用Express的X-Powered-By头信息
+app.disable('x-powered-by')
+
 // 在Express中，路由和中间件的添加顺序至关重要
 
 app.use(function(req, res, next){
@@ -50,6 +53,11 @@ app.get(config.URL_PREFIX + '/tours/oregon-coast', function (req, res) {
 
 app.get(config.URL_PREFIX + '/tours/request-group-rate', function (req, res) {
     res.render('tours/request-group-rate')
+})
+
+// 演示：获取请求报头
+app.get(config.URL_PREFIX + '/headers', function (req, res){
+    res.json(req.headers)
 })
 
 // app.use是Express添加中间件的一种方法
